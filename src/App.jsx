@@ -41,10 +41,7 @@ function AppWeather() {
   }
 
   function handleDelFavCity(city) {
-    const index = favCityList.findIndex(el => el.name === city);
-    const newfavCityList = favCityList.splice(index, 1);
-    setFavCityList(newfavCityList);
-    console.log(favCityList);
+    setFavCityList(favCityList.filter((item) => item.name !== city));
   }
 
   return (
