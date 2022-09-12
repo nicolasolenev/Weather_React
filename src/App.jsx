@@ -42,8 +42,8 @@ function AppWeather() {
 
   function handleDelFavCity(city) {
     const index = favCityList.findIndex(el => el.name === city);
-    favCityList.splice(index, 1);
-    setFavCityList(favCityList);
+    const newfavCityList = favCityList.splice(index, 1);
+    setFavCityList(newfavCityList);
     console.log(favCityList);
   }
 
